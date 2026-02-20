@@ -36,7 +36,30 @@ function prepend(value) {
     }
 }
 
+function removeAtIndex(index) {
+    if (index > this.length) return -1
+    if (index === 0) {
+        this.length--
+        this.head = this.head.next
+        this.tail.next = this.head
+        return
+    }
+
+
+    let counter = 0
+    let currentElement = this.head
+    while (counter < index - 1) {
+        currentElement = currentElement.next
+        counter++
+    }
+
+    currentElement.next = currentElement.next.next
+  
+    this.length--
+    return this.head
+}
 
 
 
-export { append, prepend }
+
+export { append, prepend, removeAtIndex }
