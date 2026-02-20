@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon ./src/Linked-list/Doubly-LinkedList/Doubly-LinkedList.js"
+    "dev": " nodemon ./src/Linked-list/Circular-LinkedList/CircularLinkedList.js"
   },
   "keywords": [],
   "author": "",
