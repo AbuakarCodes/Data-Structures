@@ -1,4 +1,4 @@
-import { append, prepend, removeAtIndex } from "./Circular_CRUD.js"
+import { append, josephusProblem, prepend, removeAtIndex } from "./Circular_CRUD.js"
 
 class Circular_LinkedList {
     constructor() {
@@ -11,8 +11,13 @@ class Circular_LinkedList {
     }
 }
 const data = new Circular_LinkedList()
-data.prepend("Mujeed") 
-data.append("zahid")
-data.append("abubakar")
-data.removeAtIndex(2) 
+// data.prepend("Mujeed") 
+// data.append("zahid")
+// data.append("abubakar")
+
+
+const result =  josephusProblem(data,0)
+console.log(result.removeAtIndex(0))
+
+ 
 console.log(data)
