@@ -1,6 +1,6 @@
 import { addAtIndex, append, getAtIndex, prepend, removeAtIndex } from "./BasicLinkedListOperations.js"
 
-class LinkedList {
+export class LinkedList {
     constructor() {
         this.head = null
         this.length = 0
@@ -10,8 +10,6 @@ class LinkedList {
         this.getAtIndex = getAtIndex
         this.removeAtIndex = removeAtIndex
     }
-
-
 }
 
 
