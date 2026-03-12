@@ -1,21 +1,23 @@
-class stack {
+export class stack {
     constructor() {
         this.Array = []
     }
     push(value) {
         this.Array.push(value)
-        this.Array
+        return value
     }
 
-    pop(){
-        if (this.Array.length < 1)  throw Error("Empty stack")
+    pop() {
+        if (this.Array.length < 1) throw Error("Empty stack")
+        let popedVAlue = this.Array[this.Array.length - 1]
         this.Array.pop()
+        return popedVAlue
     }
 
-    size(){
+    size() {
         return this.Array.length
     }
-    print(){
+    print() {
         console.log(this.Array)
     }
 }
@@ -25,4 +27,9 @@ stack1.push(1)
 stack1.push(2)
 stack1.push(3)
 stack1.pop()
-console.log(stack1) 
+
+// console.log(stack1.push("Zahid"))
+// console.log(stack1.push("abubakar"))
+// console.log(stack1.pop())
+
+// console.log(stack1.Array)
