@@ -17,7 +17,50 @@ class MinHeap {
         this.prelocateUP(hole)
     }
 
-    prelocateUP(index) {
+    remove(value) {
+
+        let idx;
+
+        // find index
+        if (value != null) {
+            idx = this.array.indexOf(value);
+            // indexOf return -1 if valune not found
+            if (idx === -1) return;
+        } else {
+            idx = 1
+        }
+
+        let lastElem = this.array.pop();
+
+        // if removing last element
+        if (idx === this.array.length) return;
+
+        this.array[idx] = lastElem;
+
+        let parentIdx = Math.floor(idx / 2);
+
+        // decide direction
+        if (idx > 1 && this.array[idx] < this.array[parentIdx]) this.percolateUp(idx);
+        else this.percolateDown(idx);
+
+    }
+
+    update(value, newValue) {
+
+        let idx = this.array.indexOf(value);
+
+        if (idx === -1) return;
+
+        this.array[idx] = newValue;
+
+        let parentIdx = Math.floor(idx / 2);
+
+        if (idx > 1 && this.array[idx] < this.array[parentIdx]) this.percolateUp(idx);
+        else this.percolateDown(idx);
+
+    } 
+
+     prelocateUP(index) {
         if (index == null || index == undefined) throw Error("index is requied")
 
         while (hole > 1 && this.array[hole] < this.array[Math.floor(hole / 2)]) {
@@ -28,7 +71,7 @@ class MinHeap {
     }
 
     perculatedown(index) {
-        if (index == undefined || index == null || index > this.array.length) throw Error("valid index is requied")
+        if (index == null || index > this.array.length) throw Error("valid index is requied")
 
         const size = this.array.length - 1
 
@@ -53,5 +96,4 @@ class MinHeap {
         }
 
     }
-
 }
