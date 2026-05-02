@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": " nodemon   ./src/Tree/BinarySerchTree/BinarySerchTree.js "
+    "dev": " nodemon   ./src/Tree/PriorityQueue/PriorityQueue.js "
   },
   "keywords": [],
   "author": "",

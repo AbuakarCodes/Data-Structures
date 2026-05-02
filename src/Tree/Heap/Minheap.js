@@ -1,4 +1,4 @@
-class MinHeap {
+export class MinHeap {
     constructor(compareFn) {
         this.array = [null];
         this.currentSize = 0;
